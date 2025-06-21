@@ -4,29 +4,35 @@ import java.util.Scanner;
 
 public class MenuCalculadora {
 
+    // Códigos ANSI para cores
+    public static final String RESET = "\u001B[0m";
+    public static final String CYAN = "\u001B[36m";   // Ciano para as bordas
+    public static final String GREEN = "\u001B[32m";  // Verde para as opções
+
     public static void main(String[] args) {
-        
+
         Scanner scanner = new Scanner(System.in);
         Calculadora calc = new Calculadora();
         boolean continuar = true;
 
         while (continuar) {
-            // Menu visual formatado como uma caixa
-            System.out.println("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
+            // Menu visual formatado como uma caixa com cor
+            System.out.println(CYAN + "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
             System.out.println("|                             |");
             System.out.println("|=-=-=-=- CALCULADORA -=-=-=-=|");
             System.out.println("|                             |");
             System.out.println("|Escolha a Operação:          |");
             System.out.println("|                             |");
-            System.out.println("|1 - SOMAR                    |");
-            System.out.println("|2 - SUBTRAIR                 |");
-            System.out.println("|3 - MULTIPLICAR              |");
-            System.out.println("|4 - DIVIDIR                  |");
-            System.out.println("|0 - SAIR                     |");
+            // As opções agora usam String.format para garantir o alinhamento
+            System.out.println(CYAN + "|" + GREEN + String.format("%-28s", "1 - SOMAR")  + RESET + CYAN + " |");
+            System.out.println(CYAN + "|" + GREEN + String.format("%-28s", "2 - SUBTRAIR") + RESET + CYAN + " |");
+            System.out.println(CYAN + "|" + GREEN + String.format("%-28s", "3 - MULTIPLICAR") + RESET + CYAN + " |");
+            System.out.println(CYAN + "|" + GREEN + String.format("%-28s", "4 - DIVIDIR") + RESET + CYAN + " |");
+            System.out.println(CYAN + "|" + GREEN + String.format("%-28s", "0 - SAIR") + RESET + CYAN + " |");
             System.out.println("|                             |");
             System.out.println("|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|");
             System.out.println("|                             |");
-            System.out.println("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
+            System.out.println("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=" + RESET); // Reseta a cor após o menu
             System.out.println();
 
             int opcao = -1;
