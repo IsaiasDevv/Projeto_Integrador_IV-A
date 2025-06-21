@@ -4,6 +4,7 @@ Projeto realizado por Isaías principal objetivo desenvolver uma calculadora e u
 ## 🚀 Funcionalidades
 
 - ✅ Funcionalidade 1: Realizar cálculos de Adição, Subtração, Multiplicação e Divisão
+- ✅ Funcionalidade 2: Realizar Testes Automatizados usando o FrameWork JUnit 5 do Java
 
 ## 💻 Tecnologias utilizadas
 * IDE Eclipse
