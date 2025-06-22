@@ -14,6 +14,9 @@ public class MenuCalculadora {
         Scanner scanner = new Scanner(System.in);
         Calculadora calc = new Calculadora();
         boolean continuar = true;
+        
+     // Pequena alteração para testar Pull Request
+
 
         while (continuar) {
             // Menu visual formatado como uma caixa com cor
